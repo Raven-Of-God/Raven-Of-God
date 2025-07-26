@@ -28,22 +28,32 @@ My work revolves around real-world vulnerabilities, offensive tooling, and bypas
 
 ---
 
-## 🛠️ Projects & Labs
+## 🛠️ Languages and Tools:
 
-- 🔥 [0-day.store](https://0-day.store) → Zero-Day Scripts & Exploits  
-- 🌐 [jyxlor.org.tr](https://jyxlor.org.tr) → Research blog  
-- 👾 [Nexta Hack Team](https://github.com/Jyxlor-web) → Tool development base
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" height="30" alt="Arduino"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="30" alt="C"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="30" alt="C++"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="HTML5"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="CSS3"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="JavaScript"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="Linux"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="30" alt="MySQL"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="30" alt="Node.js"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg" height="30" alt="Photoshop"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="30" alt="PHP"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="Python"/>
+</p>
 
 ---
 
-## ⚔️ Tools & Stack
+## 💽 Operating Systems:
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-black?style=for-the-badge&logo=python" />
-  <img src="https://img.shields.io/badge/Linux-black?style=for-the-badge&logo=linux" />
-  <img src="https://img.shields.io/badge/Burp%20Suite-orange?style=for-the-badge&logo=burpsuite" />
-  <img src="https://img.shields.io/badge/Nmap-2E8B57?style=for-the-badge&logo=nmap" />
-  <img src="https://img.shields.io/badge/TryHackMe-red?style=for-the-badge&logo=tryhackme" />
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg" height="30" alt="Arch Linux"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" height="30" alt="Debian"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="30" alt="Windows"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kali/kali-original.svg" height="30" alt="Kali"/>
 </p>
 
 ---
@@ -51,9 +61,9 @@ My work revolves around real-world vulnerabilities, offensive tooling, and bypas
 ## 📬 Connect with me
 
 <p align="center">
-  <a href="https://t.me/jyxlorzirve"><img src="https://img.shields.io/badge/Telegram-303446?style=for-the-badge&logo=telegram&logoColor=white" /></a>
+  <a href="https://t.me/jyxlor"><img src="https://img.shields.io/badge/Telegram-303446?style=for-the-badge&logo=telegram&logoColor=white" /></a>
   <a href="https://jyxlor.org.tr"><img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=firefox&logoColor=white" /></a>
-
+  <a href="https://tryhackme.com/p/jyxlor"><img src="https://img.shields.io/badge/TryHackMe-212121?style=for-the-badge&logo=tryhackme&logoColor=red" /></a>
 </p>
 
 ---
