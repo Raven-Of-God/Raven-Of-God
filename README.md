@@ -55,10 +55,10 @@ My work revolves around real-world vulnerabilities, offensive tooling, and bypas
 ## 💽 Operating Systems:
 
 <p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg" height="30" alt="Arch Linux"/>
+  [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg" height="30" alt="Arch Linux"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" height="30" alt="Debian"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="30" alt="Windows"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kali/kali-original.svg" height="30" alt="Kali"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kali/kali-original.svg" height="30" alt="Kali"/>](https://camo.githubusercontent.com/1eba76565304bc2c6f47a63dbb6089e603f8e95376d5884598d51905a33d1ddd/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d617263682c64656269616e2c7562756e74752c77696e646f77732c6b616c69)
 </p>
 
 ---
