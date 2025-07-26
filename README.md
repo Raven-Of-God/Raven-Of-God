@@ -51,9 +51,9 @@ My work revolves around real-world vulnerabilities, offensive tooling, and bypas
 ## 📬 Connect with me
 
 <p align="center">
-  <a href="https://t.me/jyxlor"><img src="https://img.shields.io/badge/Telegram-303446?style=for-the-badge&logo=telegram&logoColor=white" /></a>
+  <a href="https://t.me/jyxlorzirve"><img src="https://img.shields.io/badge/Telegram-303446?style=for-the-badge&logo=telegram&logoColor=white" /></a>
   <a href="https://jyxlor.org.tr"><img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=firefox&logoColor=white" /></a>
-  <a href="https://tryhackme.com/p/jyxlor"><img src="https://img.shields.io/badge/TryHackMe-212121?style=for-the-badge&logo=tryhackme&logoColor=red" /></a>
+
 </p>
 
 ---
