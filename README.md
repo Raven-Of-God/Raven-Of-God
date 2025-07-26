@@ -75,8 +75,8 @@ My work revolves around real-world vulnerabilities, offensive tooling, and bypas
 ---
 
 ## 💥 Motto
-> *"Exploit is an art. Silence is a weapon."*  
-> `Code. Own. Vanish.`
+> *""If you know the enemy and know yourself, you need not fear the result of a hundred battles."
+> `Sun Tzu, The Art of War.`
 
 ---
 
