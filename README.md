@@ -11,7 +11,7 @@
 ---
 
 
-<p align="center">
+<p align="left">
   <img src="https://camo.githubusercontent.com/4eb2f1680d88e1c3838cc21b5d460dccd0cd7e94acafba4effc48feae0e50ef5/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6d4672326243475a6b77636c6656444b76362f67697068792e676966" width="260px">
 </p>
 
