@@ -45,8 +45,9 @@ My work revolves around real-world vulnerabilities, offensive tooling, and bypas
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="Python"/>
 </p>
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=purple&height=100&section=footer&animation=twinkling"/>
+  <img src="https://media.tenor.com/vKqg0VfQov8AAAAd/matrix-code.gif" width="300px">
 </p>
+
 
 
 ---
