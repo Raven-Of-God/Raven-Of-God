@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Jyxlor</h1>
+<h1 align="center">Hi 👋, I'm RavenOfGod</h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F70000&width=435&lines=Exploit+Developer;Web+Security+Researcher;Payload+Engineer;Founder+of+Nexta+Hack+Team" alt="Typing SVG" />
@@ -67,9 +67,9 @@ My work revolves around real-world vulnerabilities, offensive tooling, and bypas
 ## 📬 Connect with me
 
 <p align="center">
-  <a href="https://t.me/jyxlorzirve"><img src="https://img.shields.io/badge/Telegram-303446?style=for-the-badge&logo=telegram&logoColor=white" /></a>
-  <a href="https://jyxlor.org.tr"><img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=firefox&logoColor=white" /></a>
-   <a href="https://0-day.store"><img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=firefox&logoColor=white" /></a>
+  <a href="https://t.me/ravenofgod"><img src="https://img.shields.io/badge/Telegram-303446?style=for-the-badge&logo=telegram&logoColor=white" /></a>
+  <a href="https://ravenofgod.org"><img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=firefox&logoColor=white" /></a>
+   <a href=""><img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=firefox&logoColor=white" /></a>
 </p>
 
 ---
@@ -81,5 +81,5 @@ My work revolves around real-world vulnerabilities, offensive tooling, and bypas
 ---
 
 <p align="center">
-  <img src="https://count.getloli.com/get/@jyxlor?theme=moebooru" />
+  <img src="https://count.getloli.com/get/@ravenofgod?theme=moebooru" />
 </p>
