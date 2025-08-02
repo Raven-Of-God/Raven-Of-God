@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm RavenOfGod</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F70000&width=435&lines=Exploit+Developer;Web+Security+Researcher;Payload+Engineer;Founder+of+Nexta+Hack+Team" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F70000&width=435&lines=Exploit+Developer;Web+Security+Researcher;Payload+Engineer" alt="Typing SVG" />
 </p>
 
 <p align="center">
