@@ -1,110 +1,226 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hacked By RavenOfGod</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url("https://cdn.prinsh.com/data-1/images/NathanPrinsley-anonymous-background.jpg") no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Lucida Console', monospace;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-
-    .box {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 40px 20px;
-      border-radius: 10px;
-      max-width: 900px;
-      width: 90%;
-      box-shadow: 0 0 15px #000;
-    }
-
-    img {
-      width: 22%;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: 36px;
-      color: #ff0000;
-      margin: 10px 0;
-    }
-
-    h2 {
-      font-size: 24px;
-      color: #cccccc;
-      margin: 10px 0 25px 0;
-    }
-
-    .message {
-      font-size: 18px;
-      color: #f0f0f0;
-      line-height: 1.8;
-      margin-bottom: 25px;
-    }
-
-    .links {
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
-
-    .links a {
-      color: #bbbbbb;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .links a:hover {
-      color: red;
-    }
-
-    .tagline {
-      font-size: 14px;
-      font-style: italic;
-      color: #aaaaaa;
-    }
-
-    marquee {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #000;
-      padding: 8px;
-      font-size: 16px;
-      border-top: 2px solid red;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RavenOfGod - Security Researcher</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="box">
-    <img src="https://cdn.prinsh.com/data-1/images/NathanPrinsley-hacker-aesthetic.jpg" alt="RavenOfGod">
-    <h1>Hacked By RavenOfGod</h1>
-    <h2>RavenOfGod</h2>
-    <p class="message">
-      “Bizi siz yarattınız. Kodun karanlığında büyüdük. Şimdi sistem sizin değil, bizim oyuncağımız.”
-    </p>
-    <div class="links">
-      <a href="https://t.me/ravenofgod">t.me/ravenofgod</a> |
-      <a href="https://t.me/korkuyorlar">t.me/korkuyorlar</a>
+    <div class="container">
+        <!-- Profile Header -->
+        <header class="profile-header">
+            <div class="profile-avatar">
+                <div class="avatar-container">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-icon">
+                        <img src="https://i.hizliresim.com/8cu22ab.jpg" alt="RavenOfGod" class="profile-image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-info">
+                <h1 class="profile-title">
+                    Who Am I ? <span class="highlight">RavenOfGod</span>
+                </h1>
+                
+                <div class="typing-container">
+                    <div class="typing-text">
+                        <span class="typing-words">
+                            <span>Exploit Developer</span>
+                            <span>Web Security Researcher</span>
+                            <span>Payload Engineer</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="profile-description">
+                    <p>Ben RavenOfGod.
+
+                        Yaklaşık 4 yıldır siber güvenlik alanında aktif olarak çalışıyorum.
+                        Özellikle web uygulama güvenliği, istismar teknikleri ve açık analizleri üzerine yoğunlaştım.
+                        Kurumsal sistemler, üniversite sunucuları ve çeşitli altyapılar üzerinde yaptığım testlerle birçok güvenlik zafiyeti tespit ettim.
+                        
+                        Kullandığım programlama dilleri:
+                        Python, PHP, HTML, CSS,
+                        
+                        Uzmanlık alanlarım şunlardır:
+                        
+                            Web güvenliği ve açık analizi
+                        
+                            OSINT (Açık Kaynak İstihbarat)
+                        
+                            Kriptografi
+                        
+                            
+                        
+                            
+                        
+                            Tersine mühendislik
+                        
+                           
+                        
+                        Sistemli çalışırım, sonuç odaklıyım.
+                        Teoriden çok pratikte işe yarayan yöntemlerle ilgilenirim.
+                        Siber güvenlik benim için bir ilgi alanı değil, uzun süredir içinde olduğum bir disiplin.</p>
+                    <p>My work revolves around real-world vulnerabilities, offensive tooling, and bypass techniques.</p>
+                </div>
+                
+                <div class="profile-motto">
+                    <div class="motto-item">I code what scanners miss.</div>
+                    <div class="motto-item">I break what others ignore.</div>
+                    <div class="motto-item">Always scripting, always breaking.</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Specialties Section -->
+        <section class="specialties-section">
+            <h2 class="section-title">
+                <i class="fas fa-microscope"></i> Specialties
+            </h2>
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <i class="fas fa-bug"></i>
+                    <h3>Advanced Web Exploitation</h3>
+                    <p>Deep dive into web vulnerabilities and exploitation techniques</p>
+                </div>
+                <div class="specialty-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Payload Design & Fuzzing</h3>
+                    <p>Custom payload creation and automated fuzzing techniques</p>
+                </div>
+                <div class="specialty-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Python/Bash Tool Dev</h3>
+                    <p>Automation tools and offensive security utilities</p>
+                </div>
+                <div class="specialty-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>AV/WAF Bypassing</h3>
+                    <p>Anti-virus and WAF evasion techniques</p>
+                </div>
+                <div class="specialty-card">
+                    <i class="fas fa-search"></i>
+                    <h3>OSINT Automation</h3>
+                    <p>Open source intelligence gathering automation</p>
+                </div>
+                <div class="specialty-card">
+                    <i class="fas fa-spider"></i>
+                    <h3>Dark Web Crawling</h3>
+                    <p>Deep web exploration and intelligence collection</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2 class="section-title">
+                <i class="fas fa-laptop-code"></i> Languages & Tools
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-item" data-tooltip="C">
+                    <i class="fab fa-c"></i>
+                </div>
+                <div class="skill-item" data-tooltip="C++">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="skill-item" data-tooltip="HTML5">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="skill-item" data-tooltip="CSS3">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="skill-item" data-tooltip="JavaScript">
+                    <i class="fab fa-js"></i>
+                </div>
+                <div class="skill-item" data-tooltip="Linux">
+                    <i class="fab fa-linux"></i>
+                </div>
+                <div class="skill-item" data-tooltip="MySQL">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="skill-item" data-tooltip="Node.js">
+                    <i class="fab fa-node-js"></i>
+                </div>
+                <div class="skill-item" data-tooltip="PHP">
+                    <i class="fab fa-php"></i>
+                </div>
+                <div class="skill-item" data-tooltip="Python">
+                    <i class="fab fa-python"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- OS Section -->
+        <section class="os-section">
+            <h2 class="section-title">
+                <i class="fas fa-desktop"></i> Operating Systems
+            </h2>
+            <div class="os-grid">
+                <div class="os-item">
+                    <i class="fab fa-linux"></i>
+                    <span>Arch Linux</span>
+                </div>
+                <div class="os-item">
+                    <i class="fab fa-ubuntu"></i>
+                    <span>Ubuntu</span>
+                </div>
+                <div class="os-item">
+                    <i class="fab fa-linux"></i>
+                    <span>Debian</span>
+                </div>
+                <div class="os-item">
+                    <i class="fab fa-windows"></i>
+                    <span>Windows</span>
+                </div>
+                <div class="os-item">
+                    <i class="fas fa-skull"></i>
+                    <span>Kali Linux</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2 class="section-title">
+                <i class="fas fa-envelope"></i> Connect with me
+            </h2>
+            <div class="contact-grid">
+                <a href="https://t.me/ravenofgod" class="contact-card telegram">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram</span>
+                    <div class="contact-badge">@ravenofgod</div>
+                </a>
+                <a href="https://ravenofgod.org" class="contact-card website">
+                    <i class="fas fa-globe"></i>
+                    <span>Website</span>
+                    <div class="contact-badge">ravenofgod.org</div>
+                </a>
+                <a href="https://github.com/raven-of-god" class="contact-card github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                    <div class="contact-badge">@raven-of-god</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Motto Section -->
+        <section class="motto-section">
+            <div class="motto-card">
+                <div class="motto-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <blockquote class="motto-text">
+                    "If you know the enemy and know yourself, you need not fear the result of a hundred battles."
+                </blockquote>
+                <cite class="motto-author">— Sun Tzu, The Art of War</cite>
+            </div>
+        </section>
     </div>
-    <p class="tagline">RavenOfGod: Kalabalıksan Katliam, Teksen Katilin Olurum.</p>
-  </div>
 
-  <audio src="https://cdn.prinsh.com/data-1/mp3/best-hacker-music.mp3" autoplay loop></audio>
-
-  <marquee>
-    <b>NyroxOfGod | hyperinios_0day | vyofgod | Le4kTurk5y | Flame | Sansar | Rage | Ghetto | Flexia | Berofc | usernameyokaga</b>
-  </marquee>
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
