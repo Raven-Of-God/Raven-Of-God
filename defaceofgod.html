@@ -1,1 +1,237 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Defaced by defaceofgod</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --bg1:#0f172a;
+      --bg2:#071129;
+      --card-gradient-1: linear-gradient(135deg,#0ea5a4 0%, #7c3aed 40%, #ef4444 100%);
+      --muted: rgba(255,255,255,0.75);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent 10%),
+        radial-gradient(900px 500px at 90% 90%, rgba(239,68,68,0.08), transparent 10%),
+        linear-gradient(180deg,var(--bg1),var(--bg2));
+      font-family:Inter, system-ui, sans-serif;
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px;
+    }
 
+    canvas#matrix {
+      position:fixed;
+      top:0;left:0;
+      width:100%;height:100%;
+      z-index:-1;
+      opacity:0.15;
+    }
+
+    .connections {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .wrap{
+      width:min(1100px,98%);
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:24px;
+      padding:44px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.04);
+      position:relative;
+      overflow:hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(2,6,23,0.8), inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+
+    .badge{
+      display:inline-block;
+      font-weight:700;
+      font-family:"Playfair Display", serif;
+      background:linear-gradient(90deg,#ffd400,#ff7ab6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      font-size:20px;
+      letter-spacing:0.6px;
+      position: relative;
+    }
+
+    h1{
+      font-family:"Playfair Display", serif;
+      font-size:48px;
+      margin-top:8px;
+      margin-bottom:12px;
+      line-height:1.02;
+      letter-spacing:-0.6px;
+      position: relative;
+    }
+
+    .hacker-name {
+      color:transparent;
+      background:linear-gradient(90deg,#ffd400,#ff7ab6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      position: relative;
+    }
+
+    .hacker-name::after {
+      content: '_';
+      position: absolute;
+      right: -10px;
+      animation: blink 1s step-end infinite;
+      color: #fff;
+    }
+
+    .stamp{
+      min-width:118px;
+      padding:12px 16px;
+      border-radius:14px;
+      background:var(--card-gradient-1);
+      font-weight:800;
+      font-family:monospace;
+      font-size:14px;
+      letter-spacing:0.6px;
+      color:#061017;
+      text-align:center;
+      box-shadow: 0 8px 30px rgba(124,58,237,0.18);
+    }
+
+    .quote{
+      margin-top:20px;
+      padding:18px;
+      border-radius:12px;
+      font-size:16px;
+      line-height:1.5;
+      color:#e6eef8;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      box-shadow: 0 6px 20px rgba(2,6,23,0.45);
+    }
+
+    .tg-pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      margin-top:24px;
+      padding:14px 16px;
+      border-radius:12px;
+      background: linear-gradient(90deg,#6ee7b7 0%, #60a5fa 50%, #f472b6 100%);
+      color:#042225;
+      font-weight:800;
+      text-decoration:none;
+      text-align:center;
+      box-shadow: 0 12px 30px rgba(15,23,42,0.5);
+    }
+    .tg-pill img{
+      width:22px;
+      height:22px;
+    }
+    .video{
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 10px 36px rgba(2,6,23,0.6);
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    @media (max-width:980px){
+      .wrap{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+<canvas id="matrix"></canvas>
+<svg class="connections" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <path d="M10,10 L30,50 L70,20 L90,90" stroke="rgba(124,58,237,0.1)" stroke-width="0.5" fill="none" />
+  <path d="M5,80 L40,30 L60,70 L95,10" stroke="rgba(239,68,68,0.1)" stroke-width="0.5" fill="none" />
+  <path d="M20,30 L50,70 L80,40" stroke="rgba(14,165,164,0.1)" stroke-width="0.5" fill="none" />
+</svg>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="badge">system compromised</div>
+    <h1>defaced by <span class="hacker-name">defaceofgod</span></h1>
+    <div class="stamp">root@defaceofgod | Botnet Channel @CharonC2</div>
+    <div class="quote">
+      "hiçbir sistem kusursuz değildir. En büyük güvenlik açığı sistemler değil insanlardır."
+    </div>
+    <a class="tg-pill" href="https://t.me/defaceofgod" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+      @defaceofgod @charonc2
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">
+      Discord: @defaceofgod
+    </a>
+  </div>
+
+  <div class="video">
+    <iframe width="100%" height="235" src="https://www.youtube.com/embed/4S2zUKk2idk?loop=1&playlist=4S2zUKk2idk&mute=1&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+  const canvas = document.getElementById('matrix');
+  const ctx = canvas.getContext('2d');
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  const chars = "01アイウエオカキクケコサシスセソタチツテト";
+  const fontSize = 14;
+  const columns = Math.floor(canvas.width / fontSize);
+  const drops = [];
+  for (let i = 0; i < columns; i++) {
+    drops[i] = { y: Math.random() * -100, speed: 2 + Math.random() * 5 };
+  }
+  function drawMatrix() {
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = `${fontSize}px monospace`;
+    for (let i = 0; i < drops.length; i++) {
+      const char = chars[Math.floor(Math.random() * chars.length)];
+      const x = i * fontSize;
+      ctx.fillStyle = `rgba(0, 255, 0, 0.8)`;
+      ctx.fillText(char, x, drops[i].y);
+      if (drops[i].y > canvas.height && Math.random() > 0.975) {
+        drops[i].y = 0;
+        drops[i].speed = 2 + Math.random() * 5;
+      }
+      drops[i].y += drops[i].speed;
+    }
+  }
+  setInterval(drawMatrix, 33);
+</script>
+
+</body>
+</html>
