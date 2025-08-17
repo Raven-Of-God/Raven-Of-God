@@ -17,4 +17,4 @@ $databases = array(
 User-agent: *
 
 Disallow: /etc/passwd/config.txt
-Disallow: /etc/shadow/config.txt
+Disallow: /etc/shadow/passwd.txt
