@@ -1,0 +1,20 @@
+<?php
+$databases = array(
+    'default' => array(
+        'default' => array(
+            'driver' => 'mysql',
+            'database' => '875db',
+            'username' => 'root',
+            'password' => 'U29ycnkgYnJvLCB0aGlzIGlzIG5vdCB0aGUgcGFzc3', // base64
+            'host' => '163.765.098.21',
+            'charset' => 'utf8',
+            'collation' => 'utf8_general_ci',
+            'port' => '3306',
+            'prefix' => '',
+        ),
+    ),
+);
+User-agent: *
+
+Disallow: /etc/passwd.txt
+Disallow: /etc/shadow/config.txt
