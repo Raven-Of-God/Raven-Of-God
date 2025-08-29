@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RavenGod</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            background: #000;
+        }
+        
+        #video-background {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .top-title {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            color: #FFD700;
+            text-shadow: 
+                0 0 5px rgba(255, 215, 0, 0.7),
+                0 0 10px rgba(255, 215, 0, 0.5),
+                0 0 15px rgba(255, 215, 0, 0.3);
+            animation: goldGlow 2s ease-in-out infinite alternate;
+            margin: 0;
+            padding: 10px 0;
+            z-index: 2;
+        }
+        
+        @keyframes goldGlow {
+            from {
+                text-shadow: 
+                    0 0 5px rgba(255, 215, 0, 0.7),
+                    0 0 10px rgba(255, 215, 0, 0.5);
+            }
+            to {
+                text-shadow: 
+                    0 0 10px rgba(255, 215, 0, 0.9),
+                    0 0 20px rgba(255, 215, 0, 0.7),
+                    0 0 30px rgba(255, 215, 0, 0.5);
+            }
+        }
+        
+        .main-title {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #ff0000;
+            text-shadow: 
+                0 0 3px #ff0000, 
+                0 0 6px #ff0000;
+            margin: 0;
+            text-align: center;
+            line-height: 1;
+            text-stroke: 1px #ff0000;
+            -webkit-text-stroke: 1px #ff0000;
+        }
+
+        .info-text {
+            margin-top: 30px;
+            color: #fff;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-shadow: 0 0 5px #fff;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: #00ffff;
+            text-decoration: none;
+            text-shadow: 0 0 5px #00ffff;
+            margin: 0 5px;
+        }
+        
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .message {
+            margin-top: 30px;
+            padding: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .signature {
+            margin-top: 15px;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073; }
+            to { text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6; }
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video autoplay loop playsinline id="video-background">
+            <source src="https://ravenofgod.org/gladio.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <div class="top-title">İbret-i Alem</div>
+    <div class="content">
+        <div class="main-title">Owned By ./RavenGod</div>
+        <div class="info-text">
+            <div class="social-links">
+                <p>Telegram: <a href="https://t.me/VyOfValor" target="_blank">@Vyofgod</a> & <a href="https://t.me/RavenGod" target="_blank">@ravengod</a></p>
+                <p>Instagram: <a href="https://instagram.com/ravengod" target="_blank">@ravennofgod</a></p>
+            </div>
+            <div class="message">
+                <p>Açıkları Kapatın Server Sürümü Eski & Stored XSS & CVE 2024-6531 Sürüm Açığı Ve Tüm ASM Ler Aynı Scripti Kullanmayın Saygılar :)</p>
+                <p class="signature">RavenGod<br>Web Security & Hacking | OSINT | Since 2019 ∞</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Force video play with sound
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('video-background');
+            video.setAttribute('playsinline', 'playsinline');
+            
+            // First try to play with sound
+            const playPromise = video.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    // If autoplay with sound fails, mute and try again
+                    video.muted = true;
+                    video.play().catch(e => console.log("Video play failed:", e));
+                });
+            }
+        });
+    </script>
+</body>
+</html>
