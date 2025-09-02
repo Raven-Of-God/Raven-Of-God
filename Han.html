@@ -1,1 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hacked By HaN</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
+:root {
+  --bg-color: #0a0f1c;
+  --flag-opacity: 0.2;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: #ccc;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: default;
+  animation: subtleBodyShift 18s infinite ease-in-out;
+}
+
+/* --- Arka Plan Efektleri --- */
+#flag-background {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/1920px-Flag_of_Turkey.svg.png');
+  background-size: cover; background-position: center; opacity: var(--flag-opacity); z-index: -10;
+  animation: flagPulsate 18s infinite alternate, flagGlitch 25s infinite steps(1);
+}
+@keyframes flagPulsate { 0% { opacity: 0.12; filter: saturate(0.5) blur(0.5px) brightness(0.9); } 50% { opacity: 0.28; filter: saturate(0.9) blur(0px) brightness(1.1); } 100% { opacity: 0.12; filter: saturate(0.5) blur(0.5px) brightness(0.9); } }
+@keyframes flagGlitch { 0%, 100% { clip-path: inset(0 0 0 0); } 3% { clip-path: polygon(0 0, 100% 0, 100% 25%, 0 30%, 0 55%, 100% 50%, 100% 100%, 0 100%); } 3.1% { clip-path: inset(0 0 0 0); } 7% { transform: translateX(1px) translateY(-0.5px); } 7.1% { transform: none; } }
+
+.overlay-grid, .overlay-scanlines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -8; }
+.overlay-grid { background-image: linear-gradient(rgba(30, 80, 150, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 80, 150, 0.025) 1px, transparent 1px); background-size: 35px 35px; animation: gridMove 25s linear infinite; }
+@keyframes gridMove { to { background-position: 70px 70px; } }
+.overlay-scanlines { background: linear-gradient(to bottom, rgba(25,30,60,0) 0%, rgba(25,30,60,0.04) 50%, rgba(25,30,60,0) 100%); background-size: 100% 4px; animation: scanlineMove 0.25s linear infinite; }
+@keyframes scanlineMove { to { background-position: 0 4px; } }
+@keyframes subtleBodyShift { 0%, 100% { transform: translate(0,0) skew(0deg, 0deg); } 25% { transform: translate(0.5px, -0.5px) skew(0.005deg, -0.005deg); } 50% { transform: translate(-0.5px, 0.5px) skew(-0.005deg, 0.005deg); } 75% { transform: translate(-0.5px, -0.5px) skew(0.005deg, 0.005deg); } }
+
+/* --- İçerik ve Animasyonlar --- */
+.breach-container {
+  position: relative; text-align: center; padding: 20px; z-index: 1; max-width: 95%;
+}
+
+.main-title {
+  font-family: 'Aldrich', sans-serif; font-size: clamp(2rem, 10vw, 6rem); color: #fff; text-transform: uppercase;
+  letter-spacing: 0.08em; position: relative; margin-bottom: 35px; display: block;
+}
+
+.main-title .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px) scale(0.6);
+  animation: charAppear 0.45s forwards, charRgbShift 4.5s infinite alternate;
+}
+
+.main-title .char:nth-child(1) { animation-delay: 0.50s, 0.60s; }
+.main-title .char:nth-child(2) { animation-delay: 0.58s, 0.68s; }
+.main-title .char:nth-child(3) { animation-delay: 0.66s, 0.76s; }
+.main-title .char:nth-child(4) { animation-delay: 0.74s, 0.84s; }
+.main-title .char:nth-child(5) { animation-delay: 0.82s, 0.92s; }
+.main-title .char:nth-child(6) { animation-delay: 0.90s, 1.00s; }
+
+@keyframes charAppear { to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes charRgbShift { 0%, 100% { text-shadow: 0 0 6px #ff2266, 0 0 18px #ff2266, 0 0 30px #ff226690; color: #ff99bb; } 33% { text-shadow: 0 0 6px #22ffbb, 0 0 18px #22ffbb, 0 0 30px #22ffbb90; color: #99ffee; } 66% { text-shadow: 0 0 6px #6622ff, 0 0 18px #6622ff, 0 0 30px #6622ff90; color: #cc99ff; } }
+
+.main-title .sub-title-part {
+  font-size: 0.5em; font-weight: normal; color: #dde; opacity: 0; display: inline-block;
+  vertical-align: middle; margin-left: 0.5em;
+  animation: fadeInTextSimple 1s 1.5s forwards, subTitleGlow 3.5s 1.5s infinite alternate;
+}
+@keyframes fadeInTextSimple { to { opacity: 0.9; } }
+@keyframes subTitleGlow { 0%, 100% { text-shadow: 0 0 7px rgba(50, 220, 255, 0.8), 0 0 14px rgba(50, 220, 255, 0.5); } 50% { text-shadow: 0 0 9px rgba(220, 50, 255, 0.8), 0 0 18px rgba(220, 50, 255, 0.5); } }
+
+.sub-message {
+  font-size: clamp(0.85rem, 2.3vw, 1.15rem); line-height: 1.8; max-width: 700px;
+  margin: 0 auto 35px auto; color: #b0d0f0; opacity: 0;
+  animation: fadeInTextExtended 2s 1.8s forwards;
+}
+@keyframes fadeInTextExtended { from { opacity:0; transform: translateY(15px); } to { opacity:1; transform: translateY(0px); } }
+.sub-message span.highlight { color: transparent; animation: rgbTextReveal 3.5s infinite alternate, rgbTextGlow 3.5s infinite alternate; padding: 0 2px; font-weight: bold; }
+@keyframes rgbTextReveal { 0% { background: linear-gradient(90deg, #ff3c6f, #3cffaf, #3cafff, #ff3c6f); -webkit-background-clip: text; background-clip: text; background-size: 300% 100%; background-position: 0% 50%;} 50% { background-position: 100% 50%;} 100% { background-position: 0% 50%;} }
+@keyframes rgbTextGlow { 0% { text-shadow: 0 0 4px #ff3c6f80, 0 0 7px #ff3c6f50; } 50% { text-shadow: 0 0 4px #3cffaf80, 0 0 7px #3cffaf50; } 100% { text-shadow: 0 0 4px #3cafff80, 0 0 7px #3cafff50; } }
+
+.signature-zone {
+  font-family: 'Aldrich', sans-serif; font-size: clamp(0.75rem, 1.9vw, 0.95rem); color: #778caa;
+  letter-spacing: 1.5px; margin-top: 45px; opacity: 0;
+  animation: fadeInTextExtended 2s 3.2s forwards;
+  display: inline-flex;
+  align-items: center;
+}
+.signature-zone .line {
+  height: 1px;
+  width: 60px;
+  margin: 0 15px;
+  background: linear-gradient(90deg, transparent, #556688, transparent);
+  animation: linePulse 3.5s infinite ease-in-out;
+}
+@keyframes linePulse { 0%, 100% { opacity: 0.4; transform: scaleX(0.85); } 50% { opacity: 0.9; transform: scaleX(1.15); } }
+.signature-zone strong { color: #99aabb; font-weight: normal; animation: signatureColorShift 9s infinite; }
+@keyframes signatureColorShift { 0%, 100% { color: #33bbff; } 25% { color: #ff33bb; } 50% { color: #bbff33; } 75% { color: #ffbb33; } }
+
+/* Fare Aurası için Stil */
+#mouse-aura {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.4) 0%, rgba(0, 200, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+/* Partiküller için Stil */
+.particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  font-size: 16px;
+  animation: particleFloat 2s forwards;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Tıklama Efekti için Stil */
+.click-effect {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  animation: clickExpand 0.6s ease-out forwards;
+}
+
+@keyframes clickExpand {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div id="flag-background"></div>
+<div class="overlay-grid"></div>
+<div class="overlay-scanlines"></div>
+<div id="mouse-aura"></div>
+
+<div class="breach-container">
+<h1 class="main-title">
+<span class="char">H</span><span class="char">a</span><span class="char">c</span><span class="char">k</span><span class="char">e</span><span class="char">d</span>
+<span class="sub-title-part">F*uck SeC Admin</span>
+</h1>
+
+<p class="sub-message">
+Sistem bütünlüğü aşıldı. <span class="highlight">By HaN </span> Sistem verileri elden gidiyor admin ve bu artık senin kontrolünde değil sen bunu gördüğünde bütün sistem benim elimde olacak Sen ise Delil aramaya Devam Et ezik Seni
+</p>
+
+<div class="signature-zone">
+<span class="line"></span>
+<strong>HaN <Cyber3301RD></strong>
+<span class="line"></span>
+</div>
+</div>
+
+<script>
+// Fare hareketi ile aura efekti
+document.addEventListener('mousemove', function(e) {
+  const aura = document.getElementById('mouse-aura');
+  aura.style.left = e.pageX + 'px';
+  aura.style.top = e.pageY + 'px';
+  aura.style.opacity = '1';
+  
+  // Fare hareket ettiğinde partikül oluştur
+  if (Math.random() > 0.7) {
+    createParticle(e.pageX, e.pageY);
+  }
+});
+
+// Fare sayfadan çıkınca auranın opaklığını azalt
+document.addEventListener('mouseleave', function() {
+  document.getElementById('mouse-aura').style.opacity = '0';
+});
+
+// Tıklama efekti
+document.addEventListener('click', function(e) {
+  createClickEffect(e.pageX, e.pageY);
+  
+  // Tıklama sırasında daha fazla partikül oluştur
+  for (let i = 0; i < 10; i++) {
+    setTimeout(() => {
+      createParticle(e.pageX, e.pageY);
+    }, i * 50);
+  }
+});
+
+// Partikül oluşturma fonksiyonu
+function createParticle(x, y) {
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  
+  // Rastgele karakterler ve renkler
+  const characters = ['0', '1', '#', '*', '%', '$', '@'];
+  const colors = ['#ff3366', '#33ff99', '#3366ff', '#ffcc00'];
+  
+  particle.textContent = characters[Math.floor(Math.random() * characters.length)];
+  particle.style.color = colors[Math.floor(Math.random() * colors.length)];
+  particle.style.left = (x + Math.random() * 20 - 10) + 'px';
+  particle.style.top = (y + Math.random() * 20 - 10) + 'px';
+  
+  document.body.appendChild(particle);
+  
+  // Animasyon bittikten sonra partikülü kaldır
+  setTimeout(() => {
+    particle.remove();
+  }, 2000);
+}
+
+// Tıklama efekti oluşturma fonksiyonu
+function createClickEffect(x, y) {
+  const effect = document.createElement('div');
+  effect.className = 'click-effect';
+  effect.style.left = x + 'px';
+  effect.style.top = y + 'px';
+  
+  // Rastgele renk
+  const colors = ['#ff3366', '#33ff99', '#3366ff', '#ffcc00'];
+  effect.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+  
+  document.body.appendChild(effect);
+  
+  // Animasyon bittikten sonra efekti kaldır
+  setTimeout(() => {
+    effect.remove();
+  }, 600);
+}
+
+// Sayfa yüklendiğinde başlangıç animasyonu için partiküller oluştur
+window.addEventListener('load', function() {
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      createParticle(
+        Math.random() * window.innerWidth,
+        Math.random() * window.innerHeight
+      );
+    }, i * 100);
+  }
+});
+
+// Sayfa boyutu değiştiğinde partikülleri temizle
+window.addEventListener('resize', function() {
+  document.querySelectorAll('.particle').forEach(particle => particle.remove());
+});
+</script>
+</body>
+</html>
